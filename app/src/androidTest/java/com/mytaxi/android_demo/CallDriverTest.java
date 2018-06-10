@@ -4,6 +4,7 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.espresso.matcher.RootMatchers;
 import android.support.test.rule.GrantPermissionRule;
+import android.view.WindowManager;
 
 import com.mytaxi.android_demo.activities.MainActivity;
 
@@ -65,7 +66,7 @@ public class CallDriverTest {
         ViewInteraction loginButton =  onView(allOf(withId(R.id.btn_login), isDisplayed()));
         loginButton.perform(click());
 
-        sleep(2000);
+        sleep(9000);
         // Validate presence of Search Bar Locator and enter search term
         ViewInteraction searchBarTextView =  onView(allOf(withId(R.id.textSearch),isDisplayed()));
         searchBarTextView.perform(clearText(),typeText(searchText), closeSoftKeyboard());
